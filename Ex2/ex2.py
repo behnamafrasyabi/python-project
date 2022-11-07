@@ -143,6 +143,8 @@ def time_to_utc(utc_offset, time):
     x=-utc+time
     if x>=24:
         x=x-24
+    if x<0:
+        x=x+24
     return(x)
 
 
@@ -172,4 +174,6 @@ def time_from_utc(utc, time):
     x=utc+time
     if x>=24:
         x=x-24
+    if x<0:
+        x=x+24
     return(x)
